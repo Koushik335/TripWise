@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8f4">
+    <meta name="description" content="Discover interesting places, explore attractions and build your personal travel itinerary with TripWise.">
+    <title>TripWise | Smart Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="#" class="logo" aria-label="TripWise home">
+            TripWise<span>.</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="#explore">Explore</a>
+            <a href="#my-trip">My Trip <span id="nav-trip-count">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</p>
+
+            <h1>Find your next <span>escape.</span></h1>
+
+            <p class="hero-text">
+                Discover remarkable places, explore local attractions,
+                and create a trip worth remembering.
+            </p>
+
+            <form id="search-form" class="search-box">
+                <input
+                    id="search-input"
+                    type="search"
+                    placeholder="Try Chennai, Ooty, Goa..."
+                    aria-label="Search for a city"
+                    required
+                >
+                <button type="submit" id="search-button">
+                    Explore places
+                </button>
+            </form>
+
+            <p class="search-hint">
+                Discover places. Save favourites. Plan better.
+            </p>
+        </section>
+
+        <section id="explore" class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">MADE FOR EXPLORERS</p>
+                    <h2>Explore destinations</h2>
+                    <p class="section-description">
+                        Find interesting places around your chosen city.
+                    </p>
+                </div>
+
+                <span id="result-count">Ready to explore</span>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="category-filter">Category</label>
+                    <select id="category-filter">
+                        <option value="all">All places</option>
+                        <option value="natural">Nature</option>
+                        <option value="cultural">Culture & history</option>
+                        <option value="architecture">Architecture</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sort-filter">Sort by</label>
+                    <select id="sort-filter">
+                        <option value="name">Name (A–Z)</option>
+                        <option value="name-desc">Name (Z–A)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div
+                id="status-message"
+                class="status-message"
+                role="status"
+                aria-live="polite"
+            >
+                Search for a city to discover nearby attractions.
+            </div>
+
+            <div id="destination-grid" class="destination-grid"></div>
+        </section>
+
+        <section id="destination-details" class="section details-section" hidden>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR NEXT STOP</p>
+                    <h2>Destination details</h2>
+                </div>
+
+                <button type="button" id="close-details" class="secondary-button">
+                    Close details
+                </button>
+            </div>
+
+            <article id="details-content" class="details-card"></article>
+        </section>
+
+        <section id="my-trip" class="section trip-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+                    <h2>My Trip <span id="trip-count">(0)</span></h2>
+                    <p class="section-description">
+                        The places you save for your next adventure.
+                    </p>
+                </div>
+            </div>
+
+            <div id="trip-status" class="status-message" role="status"></div>
+            <div id="trip-list" class="trip-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">TripWise<span>.</span></a>
+        <p>Discover. Plan. Explore.</p>
+        <p class="footer-note">
+            Place information provided by Geoapify.
+        </p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
