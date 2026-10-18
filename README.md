@@ -6,7 +6,7 @@ TripWise is a responsive travel discovery and itinerary-planning web application
 
 ## 🚀 Live Demo
 
-[Explore TripWise](https://cute-dieffenbachia-ac9bbf.netlify.app/)
+[Explore TripWise](https://tripwise1.netlify.app/)
 
 ## ✨ Features
 
